@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./montserrat/montserrat-regular.eot');
+  src: url('./montserrat/montserrat-regular.woff') format('woff'),
+    url('./montserrat/montserrat-regular.woff2') format('woff2'),
+    url('./montserrat/montserrat-regular.ttf') format('truetype'),
+    url('./montserrat/montserrat-regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./montserrat/montserrat-bold.eot');
+  src: url('./montserrat/montserrat-bold.woff') format('woff'),
+    url('./montserrat/montserrat-bold.woff2') format('woff2'),
+    url('./montserrat/montserrat-bold.ttf') format('truetype'),
+    url('./montserrat/montserrat-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./quicksand/quicksand-bold.woff2') format('woff2'),
+    url('./quicksand/quicksand-bold.ttf') format('truetype'),
+    url('./quicksand/quicksand-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./quicksand/Quicksand-Regular.eot');
+  src: url('./quicksand/Quicksand-Regular.woff') format('woff'),
+    url('./quicksand/Quicksand-Regular.ttf') format('truetype'),
+    url('./quicksand/Quicksand-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./open-sans/open-sans-regular.svg') format('svg'),
+    url('./open-sans/open-sans-regular.ttf') format('truetype'),
+    url('./open-sans/open-sans-regular.woff') format('woff'),
+    url('./open-sans/open-sans-regular.woff2') format('woff2'),
+    url('./open-sans/open-sans-regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./open-sans/open-sans-bold.svg') format('svg'),
+    url('./open-sans/open-sans-bold.ttf') format('truetype'),
+    url('./open-sans/open-sans-bold.eot') format('embedded-opentype'),
+    url('./open-sans/open-sans-bold.woff') format('woff'),
+    url('./open-sans/open-sans-bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
