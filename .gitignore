@@ -1,0 +1,10 @@
+#vim
+*.swp
+*.swo
+
+node_modules/*
+dist/*
+*.log
+*.lock
+*-lock*
+tags
