@@ -1,0 +1,9 @@
+{
+  "name": "fsd",
+  "version": "1.0.0",
+  "description": "FSD test task",
+  "main": "index.js",
+  "repository": "https://axiom777@github.com/axiom777/fsd.git",
+  "author": "Evgenii Popov <axiom777@yandex.ru>",
+  "license": "MIT"
+}
