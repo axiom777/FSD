@@ -1,0 +1,12 @@
+@import './variables.scss';
+@mixin media-down($size) {
+   @media (max-width: $size) {
+    @content;
+  }
+}
+@mixin media-up($size) {
+   @media (min-width: $size) {
+    @content;
+  }
+}
+
