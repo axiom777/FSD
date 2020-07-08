@@ -6,6 +6,7 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Get Pages
 const pagesDir = path.resolve(__dirname, 'src/pages');
@@ -52,6 +53,19 @@ module.exports = (env, options) => {
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].css',
+      }),
+      new FaviconsWebpackPlugin({
+        logo: path.resolve(__dirname, 'src/images/logo.svg'),
+        icons: {
+          android: true, // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          appleIcon: true, // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          appleStartup: false, // Create Apple startup images. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          coast: false, // Create Opera Coast icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          favicons: true, // Create regular favicons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          firefox: true, // Create Firefox OS icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          windows: false, // Create Windows 8 tile icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+          yandex: true, // Create Yandex browser icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
+        },
       }),
     ],
     devServer: {
