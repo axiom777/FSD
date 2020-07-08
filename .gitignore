@@ -3,6 +3,7 @@
 *.swo
 
 node_modules/*
+build/*
 dist/*
 *.log
 *.lock
