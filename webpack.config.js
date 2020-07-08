@@ -40,6 +40,28 @@ module.exports = (env, options) => {
           test: /\.s?css$/,
           loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         },
+        {
+          test: /\.(woff(2)?|ttf|eot|svg)$/,
+          include: [path.resolve(__dirname, 'src/fonts')],
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts',
+            },
+          },
+        },
+        {
+          test: /\.(png|jpg|jpeg|svg|gif)$/,
+          exclude: [path.resolve(__dirname, 'src/fonts')],
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images',
+            },
+          },
+        },
       ],
     },
     plugins: [
