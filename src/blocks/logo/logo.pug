@@ -4,5 +4,5 @@ mixin logo(options)
     const logo = image ? image: "logo.svg"
     const mod = options && options.mod && options.mod
 
-  .logo(class = mod && mod)
+  .logo(class = mod && `logo_${mod}`)
     img.logo__image(src=require(`blocks/logo/images/${logo}`).default)
