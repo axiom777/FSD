@@ -1,0 +1,61 @@
+{
+  "colors": [
+    {
+      "name": "Dark Shade 100%",
+      "code": "#1F2041",
+      "mod": "dsh100"
+    },
+    {
+      "name": "Dark Shade 75%",
+      "code": "#1F2041",
+      "mod": "dsh75"
+    },
+    {
+      "name": "Dark Shade 50%",
+      "code": "#1F2041",
+      "mod": "dsh50"
+    },
+    {
+      "name": "Dark Shade 25%",
+      "code": "#1F2041",
+      "mod": "dsh25"
+    },
+    {
+      "name": "Dark Shade 5%",
+      "code": "#1F2041",
+      "mod": "dsh5"
+    },
+    {
+      "name": "Purple",
+      "code": "#BC9CFF",
+      "mod": "purple"
+    },
+    {
+      "name": "Green",
+      "code": "#6FCF97",
+      "mod": "green"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "H1",
+      "text": "This one is the sub-section or <br> widget title",
+      "mod": "h1"
+    },
+    {
+      "name": "H2",
+      "text": "Next one is the item title inside <br> widgets",
+      "mod": "h2"
+    },
+    {
+      "name": "H3",
+      "text": "This is a label or CTA text",
+      "mod": "h3"
+    },
+    {
+      "name": "Body",
+      "text": "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.",
+      "mod": "body"
+    }
+  ]
+}

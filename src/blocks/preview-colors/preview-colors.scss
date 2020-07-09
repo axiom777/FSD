@@ -1,4 +1,13 @@
 @import '~scss/variables.scss';
+$colors: (
+  dsh100: $dark,
+  dsh75: $dark75,
+  dsh50: $dark50,
+  dsh25: $dark25,
+  dsh5: $dark5,
+  purple: $purple,
+  green: $green,
+);
 .preview-colors {
   display: flex;
   flex-direction: column;
@@ -28,26 +37,10 @@
     height: 70px;
     border-radius: 6px;
     background: $dark;
-    &_dsh100 {
-      background: $dark;
-    }
-    &_dsh75{
-      background: $dark75;
-    }
-    &_dsh50{
-      background: $dark50;
-    }
-    &_dsh25{
-      background: $dark25;
-    }
-    &_dsh5{
-      background: $dark5;
-    }
-    &_purple{
-      background: $purple;
-    }
-    &_green{
-      background: $green;
+    @each $mod, $color in $colors {
+      &_#{$mod} {
+        background: $color;
+      }
     }
   }
 }

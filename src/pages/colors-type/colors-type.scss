@@ -1,0 +1,13 @@
+.colors-type {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+
+  &__colors {
+  padding-left: 30px;
+  }
+
+  &__fonts {
+    padding-right: 31px;
+  }
+}

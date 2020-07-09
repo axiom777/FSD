@@ -1,0 +1,17 @@
+extends ../../layouts/ui-layout.pug
+include ../../blocks/container/container.pug
+include ../../blocks/logo/logo.pug
+include ../../blocks/preview-colors/preview-colors.pug
+include ../../blocks/preview-fonts/preview-fonts.pug
+
+
+block meta
+  title Colors & type
+
+block content
+  - const {colors, fonts}= require('./colors-type.json')
+  .colors-type
+    .colors-type__colors
+      +preview-colors(colors)
+    .colors-type__fonts
+      +preview-fonts(fonts)

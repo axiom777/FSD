@@ -1,0 +1,68 @@
+@import '~scss/variables';
+$fonts: (
+  h1: (
+    font: 'Quicksand',
+    fsz: $font-lg,
+    weight: bold,
+  ),
+  h2: (
+    font: 'Quicksand',
+    fsz: $font-md,
+    weight: bold,
+  ),
+  h3: (
+    font: 'Montserrat',
+    fsz: $font-sm,
+    weight: bold,
+    transform: uppercase,
+  ),
+  body: (
+    font: 'Montserrat',
+    fsz: $font,
+    lh: rem(24),
+    mt: -3px,
+  ),
+);
+
+.preview-fonts {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 50px;
+    display: flex;
+
+    @each $mod, $values in $fonts {
+      &_#{$mod} {
+        @if map-has-key($values, 'fsz') {
+          font-size: map-get($values, 'fsz');
+        }
+        & .preview-fonts__text {
+          @if map-has-key($values, 'font') {
+            font-family: map-get($values, 'font');
+          }
+          @if map-has-key($values, 'weight') {
+            font-weight: map-get($values, 'weight');
+          }
+          @if map-has-key($values, 'lh') {
+            line-height: map-get($values, 'lh');
+          }
+          @if map-has-key($values, 'transform') {
+            text-transform: map-get($values, 'transform');
+          }
+          @if map-has-key($values, 'mt') {
+            margin-top: map-get($values, 'mt');
+          }
+        }
+      }
+    }
+  }
+
+  &__name {
+    margin-right: 30px;
+    text-align: right;
+    min-width: 37px;
+    font-family: 'Montserrat';
+    color: $dark25;
+  }
+}
