@@ -16,6 +16,9 @@ module.exports = (env, options) => {
   const isDev = options.mode === 'development';
   return {
     resolve: {
+      alias: {
+        scss: path.resolve(__dirname, 'src/scss/'),
+      },
       modules: [
         path.resolve(__dirname, 'src'),
         path.resolve(__dirname, 'node_modules'),
