@@ -1,0 +1,53 @@
+@import '~scss/variables.scss';
+.preview-colors {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__desctiption {
+    margin-left: 40px;
+    font-family: 'Quicksand';
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__code {
+  }
+
+  &__box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    background: $dark;
+    &_dsh100 {
+      background: $dark;
+    }
+    &_dsh75{
+      background: $dark75;
+    }
+    &_dsh50{
+      background: $dark50;
+    }
+    &_dsh25{
+      background: $dark25;
+    }
+    &_dsh5{
+      background: $dark5;
+    }
+    &_purple{
+      background: $purple;
+    }
+    &_green{
+      background: $green;
+    }
+  }
+}

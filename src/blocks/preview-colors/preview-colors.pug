@@ -1,0 +1,9 @@
+mixin preview-colors(colors)
+  .preview-colors
+    each item in colors
+      - const { mod, name, code} = item;
+      .preview-colors__item
+        .preview-colors__box(class=`preview-colors__box_${mod}`)
+        .preview-colors__desctiption
+          .preview-colors__name= name
+          .preview-colors__code= code
