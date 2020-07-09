@@ -15,6 +15,12 @@ const pages = fs.readdirSync(pagesDir);
 module.exports = (env, options) => {
   const isDev = options.mode === 'development';
   return {
+    resolve: {
+      modules: [
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'node_modules'),
+      ],
+    },
     entry: {
       index: './src/index.js',
     },
