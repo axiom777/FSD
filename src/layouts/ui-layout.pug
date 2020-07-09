@@ -1,0 +1,16 @@
+include ../blocks/container/container.pug
+include ../blocks/logo/logo.pug
+
+block variables
+
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+    meta(name='viewport', content='initial-scale=1.0, width=device-width')
+    block meta
+  body(class=bodyClass && bodyClass, style=bodyStyle && bodyStyle)
+    +container({mod:'outer'})
+      +logo({'mod': 'ui-kit', 'image':'logo-gray.svg'})
+      +container
+        block content
