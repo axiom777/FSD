@@ -1,3 +1,13 @@
+// Material Icons
+$material-icons-font-path: '~material-icons/iconfont/';
+@import '~material-icons/iconfont/material-icons.scss';
+
+// FontAwesome
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+//@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+//@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+
 @font-face {
   font-family: 'Montserrat';
   src: url('./montserrat/montserrat-regular.eot');

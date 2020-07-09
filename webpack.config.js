@@ -55,7 +55,10 @@ module.exports = (env, options) => {
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)$/,
-          include: [path.resolve(__dirname, 'src/fonts')],
+          include: [
+            path.resolve(__dirname, 'src/fonts'),
+            path.resolve(__dirname, 'node_modules'),
+          ],
           use: {
             loader: 'file-loader',
             options: {
