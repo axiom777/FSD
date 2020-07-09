@@ -1,0 +1,8 @@
+mixin logo(options)
+  -
+    const image = options && options.image && options.image
+    const logo = image ? image: "logo.svg"
+    const mod = options && options.mod && options.mod
+
+  .logo(class = mod && mod)
+    img.logo__image(src=require(`blocks/logo/images/${logo}`).default)
