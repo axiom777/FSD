@@ -1,13 +1,29 @@
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
+
 .colors-type {
-  margin-top: 62px;
+  margin-top: 22px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include media-up($md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__colors {
-  padding-left: 30px;
+    margin: 40px auto 0;
+    padding-left: 30px;
+    @include media-up($md) {
+      margin-left: 0;
+    }
   }
 
   &__fonts {
+    margin: 40px auto 0;
     padding-right: 31px;
+    @include media-up($md) {
+      margin-right: 0;
+    }
   }
 }
