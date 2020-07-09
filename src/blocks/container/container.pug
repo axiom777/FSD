@@ -1,0 +1,4 @@
+mixin container(options)
+  - let mod = options && options.mod && options.mod;
+  .container(class=mod && `container_${mod}`)
+    block

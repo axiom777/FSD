@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 $padding;
+  @include media-up($xl) {
+    max-width: $xl;
+  }
+  &_outer {
+    padding: 0;
+    @include media-up($xxl) {
+      max-width: $xxl;
+      padding: 0 $padding;
+    }
+  }
+}
