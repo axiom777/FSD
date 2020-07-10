@@ -2,7 +2,7 @@ $rem: 16;
 $padding: 20px;
 
 @function rem($fsz) {
-  @return ($fsz/$rem)+rem;
+  @return ($fsz/$rem) + rem;
 }
 
 // Breakpoints
@@ -20,7 +20,7 @@ $dark25: rgba(31, 32, 65, 0.25);
 $dark5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
-
+$white: #ffffff;
 
 // Fonts
 $font-lg: rem(24);
