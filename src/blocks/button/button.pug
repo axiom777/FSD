@@ -1,0 +1,14 @@
+mixin button(options)
+  - const { text, link, mod, state, size } = options;
+  - let classes = "";
+  - classes += (mod && "button_" + mod) || "";
+  - classes += (state && " button_" + state) || "";
+  - classes += (size && size === "small" && " button_" + size) || "";
+
+  if link
+    a.button(href=link, class=classes && classes)= text
+  else
+    if state === 'disabled'
+      button.button(class=classes, disabled)= text
+    else
+      button.button(class=classes, disabled)= text

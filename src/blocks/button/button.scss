@@ -1,0 +1,63 @@
+@import '~scss/variables.scss';
+$border-size: 2px;
+$padding-y: 14px;
+$padding-x: 20px;
+$padding-y-small: 10px;
+$border-radius: 22px;
+$gradient: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 1) 0%,
+  rgba(139, 164, 249, 1) 100%
+);
+$gradient-white: linear-gradient(white, white);
+$gradient-50: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5) 0%,
+  rgba(139, 164, 249, 0.5) 100%
+);
+
+.button {
+  padding: $padding-y $padding-x;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: $purple;
+  cursor: pointer;
+  min-width: 100%;
+  text-align: center;
+
+  &:hover {
+    color: $dark50;
+  }
+  &_small {
+  padding: $padding-y-small $padding-x;
+  }
+  &_bordered {
+    padding: $padding-y - $border-size $padding-x - $border-size;
+    border: solid $border-size transparent;
+    border-radius: $border-radius;
+    background-image: $gradient-white, $gradient;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-background-clip: padding-box, border-box;
+    &:hover {
+      color: $purple;
+      background-image: $gradient-white, $gradient-50;
+    }
+  }
+  &_small.button_bordered  {
+    padding: $padding-y-small - $border-size $padding-x - $border-size;
+    
+  }
+  &_filled {
+    color: $white;
+    border-radius: $border-radius;
+    background: $gradient;
+    &:hover {
+      color: $white;
+      background: $gradient-50;
+    }
+  }
+}
