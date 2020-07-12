@@ -21,8 +21,8 @@
 
   &__fonts {
     margin: 40px auto 0;
-    padding-right: 31px;
     @include media-up($md) {
+      padding-right: 51px;
       margin-right: 0;
     }
   }
