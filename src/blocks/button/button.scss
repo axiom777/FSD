@@ -27,12 +27,13 @@ $gradient-50: linear-gradient(
   cursor: pointer;
   min-width: 100%;
   text-align: center;
+  font-size: 12px;
 
   &:hover {
     color: $dark50;
   }
-  &_small {
-  padding: $padding-y-small $padding-x;
+  &_size_small {
+    padding: $padding-y-small $padding-x;
   }
   &_bordered {
     padding: $padding-y - $border-size $padding-x - $border-size;
@@ -47,9 +48,8 @@ $gradient-50: linear-gradient(
       background-image: $gradient-white, $gradient-50;
     }
   }
-  &_small.button_bordered  {
+  &_size_small.button_bordered {
     padding: $padding-y-small - $border-size $padding-x - $border-size;
-    
   }
   &_filled {
     color: $white;

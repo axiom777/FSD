@@ -3,7 +3,7 @@ mixin button(options)
   - let classes = "";
   - classes += (mod && "button_" + mod) || "";
   - classes += (state && " button_" + state) || "";
-  - classes += (size && size === "small" && " button_" + size) || "";
+  - classes += (size && size === "small" && " button_size_" + size) || "";
 
   if link
     a.button(href=link, class=classes && classes)= text
