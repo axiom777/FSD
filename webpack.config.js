@@ -18,6 +18,7 @@ module.exports = (env, options) => {
     resolve: {
       alias: {
         scss: path.resolve(__dirname, 'src/scss/'),
+        fonts: path.resolve(__dirname, 'src/fonts/'),
       },
       modules: [
         path.resolve(__dirname, 'src'),
