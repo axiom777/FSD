@@ -1,0 +1,116 @@
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
+
+.top-menu {
+  width: 100%;
+  &__list {
+    height: 100%;
+    flex-direction: column;
+
+    @include media-up($lg) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &_desktop {
+    .top-menu__item {
+      &:hover {
+        .top-menu__submenu {
+          max-height: 300px;
+          transition: 0.4s all ease;
+        }
+        & > .top-menu__link {
+          color: $dark;
+
+          &:after {
+            transform: scaleY(-1);
+            transition: 0.4s all ease;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up($lg) {
+      flex-direction: row;
+      margin-right: 20px;
+    }
+
+    &_active {
+      & .top-menu__submenu {
+        display: block;
+        margin-left: 10px;
+      }
+      & > .top-menu__link:after {
+        transform: scaleY(-1);
+        transition: 0.4s all ease;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    color: $dark50;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 20px 0;
+
+    @include media-up($lg) {
+      padding: 0;
+    }
+
+    &_active {
+      font-weight: bold;
+      color: $dark75;
+    }
+
+    &_submenu {
+      &:after {
+        content: 'expand_more';
+        align-self: center;
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 20px;
+        transition: 0.4s all ease;
+      }
+    }
+
+    &_sublink {
+      padding: 20px 0;
+    }
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &__submenu {
+    display: none;
+
+    @include media-up($lg) {
+      display: flex;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: translateY(100%);
+      flex-direction: row;
+      background: $white;
+      padding: 0 20px;
+      transition: 0.4s all ease;
+      box-shadow: 0px 10px 10px rgba(31, 32, 65, 0.05);
+      border-top: 1px solid $dark5;
+      max-height: 0;
+    }
+  }
+}

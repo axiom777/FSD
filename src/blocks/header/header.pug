@@ -1,0 +1,24 @@
+include ../logo/logo.pug
+include ../top-menu/top-menu.pug
+include ../button/button.pug
+
+mixin header(menu,autorize,name)
+  .header 
+    .header__logo
+      +logo
+    .header__mobile-button.js-header__mobile-button
+      .header__mobile-bar1
+      .header__mobile-bar2
+      .header__mobile-bar3
+    .header__controls.js-header__controls
+      if(name)
+        .header__user 
+          .header__name= name
+      else
+        .header__buttons
+          .header__button
+            +button({text:"Войти", mod:"bordered", size:"small" })
+          .header__button
+            +button({text:"Зарегистрироваться", mod:"filled", size:"small" })
+      .header__menu
+        +top-menu(menu)

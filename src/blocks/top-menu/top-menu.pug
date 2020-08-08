@@ -1,0 +1,17 @@
+mixin top-menu(menuItems)
+  nav.top-menu.top-menu_desktop.js-top-menu
+    ul.top-menu__list
+      each item in menuItems
+        -
+          const { name, link, active, submenu } = item;
+          let classes = (active === "true" && `top-menu__link_active`) || "";
+          classes = (submenu && classes + "top-menu__link_submenu") || classes;
+
+        li.top-menu__item
+          a.top-menu__link(class=classes && classes)(href=link || "#")= name
+          if submenu
+            ul.top-menu__submenu
+              each subItem in submenu
+                - const { subName, subLink} = subItem;
+                li.top-menu__item
+                  a.top-menu__link.top-menu__link_sublink(href='#')= subName

@@ -1,0 +1,155 @@
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: $dark50;
+  align-items: center;
+
+  @include media-up($lg) {
+    align-items: stretch;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+    background: $white;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    z-index: -1;
+  }
+  &__logo {
+    margin: 15px 0;
+  }
+
+  &__controls {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    background-color: #fff;
+
+    &_actived {
+      min-height: 100px;
+      max-height: 100vh;
+      min-width: 300px;
+      transition: 0.4s;
+      padding: 20px;
+      z-index: 1;
+      overflow: scroll;
+      @include media-up($lg) {
+        padding: 0;
+      }
+    }
+
+    @include media-up($lg) {
+      display: flex;
+      position: static;
+      flex-direction: row-reverse;
+      max-height: 100%;
+      overflow: visible;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    height: auto;
+    @include media-up($lg) {
+      min-height: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    @include media-up($lg) {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 10px;
+    @include media-up($lg) {
+      margin: 0;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__user {
+    @include media-up($lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__name {
+    margin: 20px 0;
+    font-size: $font-md;
+    @include media-up($lg) {
+      border-left: 1px solid $dark10;
+      font-size: $font;
+      padding-left: 20px;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__mobile-button {
+    display: inline-block;
+    align-self: center;
+    cursor: pointer;
+    @include media-up($lg) {
+      display: none;
+    }
+
+    &_actived {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      .header__mobile-bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .header__mobile-bar2 {
+        opacity: 0;
+      }
+
+      .header__mobile-bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+  }
+
+  &__mobile-bar1,
+  &__mobile-bar2,
+  &__mobile-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $purple;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first &__mobile-bar */
+}

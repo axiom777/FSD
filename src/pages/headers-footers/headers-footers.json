@@ -1,0 +1,38 @@
+{
+  "header": {
+    "menu": [
+      {
+        "name": "О нас",
+        "link": "#",
+        "active": "true"
+      },
+      {
+        "name": "Услуги",
+        "link": "#",
+        "submenu": [
+          { "subName": "Услга 1", "subLink": "#" },
+          { "subName": "Услга 2", "subLink": "#" },
+          { "subName": "Услга 3", "subLink": "#" }
+        ]
+      },
+      {
+        "name": "Вакансии",
+        "link": "#"
+      },
+      {
+        "name": "Новости",
+        "link": "#"
+      },
+      {
+        "name": "Соглашения",
+        "link": "#",
+        "submenu": [
+          { "subName": "Соглашение 1", "subLink": "#" },
+          { "subName": "Соглашение 2", "subLink": "#" },
+          { "subName": "Соглашение 3", "subLink": "#" }
+        ]
+      }
+    ],
+    "user":"Юлий Цезарь"
+  }
+}
