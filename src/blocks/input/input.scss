@@ -1,0 +1,54 @@
+@import '~scss/variables.scss';
+@import '~scss/mixins.scss';
+.input {
+  position: relative;
+  .input__control {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $dark25;
+    color: $dark75;
+    font-family: 'Montserrat';
+    padding: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: rem(14);
+    &:focus {
+      border: 1px solid $dark50;
+      outline: none;
+    }
+    &::-webkit-input-placeholder {
+      color: $dark25;
+    }
+    &:-moz-placeholder {
+      color: $dark25;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: $dark25;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $dark25;
+    }
+    &::-ms-input-placeholder {
+      color: $dark25;
+    }
+    &::placeholder {
+      color: $dark25;
+    }
+  }
+  &__button {
+    font-family: "Material Icons";
+    border: none;
+    font-size: rem(24);
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+
+
+    background: $linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

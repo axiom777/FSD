@@ -1,11 +1,12 @@
 extends /layouts/ui-layout.pug
 include /blocks/header/header.pug
+include /blocks/footer/footer.pug
 
 block variables
   - const bodyStyle = "background:#F4F4F6";
 
 block content
-  - const { header } = require("./headers-footers.json");
+  - const { header,footer } = require("./headers-footers.json");
   - const { menu, user } = header;
 
   .headers-footers
@@ -13,5 +14,7 @@ block content
       +header(menu)
     .headers-footers__item
       +header(menu, "true", user)
-    .headers-footers__item.headers-footers__item_background
     .headers-footers__item
+      +footer(footer)
+    .headers-footers__item
+      

@@ -1,0 +1,31 @@
+include ../logo/logo.pug
+include ../input/input.pug
+include ../social/social.pug
+
+mixin footer(props)
+  - const { description, menu, subscribe, copyrights } = props;
+  footer.footer
+    .footer__container
+      .footer__logo
+        +logo
+        .footer__description= description
+      nav.footer__nav
+        each item in menu 
+          .footer__list
+            .footer__title= item.title
+            each link in item.list
+              a.footer__link(href=link.link)= link.name
+      .footer__subscribe
+        .footer__title= subscribe.title
+        .footer__subscribe-text= subscribe.description
+        .footer__input
+          +input({type:"email", placeholder:"Email", button: true})
+    .footer__copyright
+      .footer__copyright-text= copyrights
+      .footer__social
+        .footer__social-item
+          +social("fab fa-twitter")
+        .footer__social-item
+          +social("fab fa-facebook-square")
+        .footer__social-item
+          +social("fab fa-instagram")

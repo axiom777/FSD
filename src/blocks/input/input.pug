@@ -1,0 +1,9 @@
+mixin input(props)
+  - const inpType = props.type;
+  - const inpPlace = props.placeholder;
+  - const button = props.button || false;
+  - const inpValue = props.value || "";
+  .input
+    input.input__control(type=inpType, placeholder=inpPlace, value=inpValue)
+    if button
+      button.input__button arrow_forward
