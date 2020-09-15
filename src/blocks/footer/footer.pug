@@ -2,9 +2,11 @@ include ../logo/logo.pug
 include ../input/input.pug
 include ../social/social.pug
 
-mixin footer(props)
+mixin footer(props,size)
   - const { description, menu, subscribe, copyrights } = props;
-  footer.footer
+  - const uikit = size === "small"
+  
+  footer.footer(class= uikit && "footer_uikit")
     .footer__container
       .footer__logo
         +logo
