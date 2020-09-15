@@ -23,6 +23,18 @@ $purple: #bc9cff;
 $green: #6fcf97;
 $white: #ffffff;
 
+// Gradient
+$linear-gradient: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 1) 0%,
+  rgba(139, 164, 249, 1) 100%
+);
+$linear-gradient05: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5) 0%,
+  rgba(139, 164, 249, 0.5) 100%
+);
+
 // Fonts
 $font-lg: rem(24);
 $font-md: rem(19);
