@@ -12,10 +12,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const pagesDir = path.resolve(__dirname, 'src/pages');
 const pages = fs.readdirSync(pagesDir);
 
-module.exports = (env, options) => {
+module.exports = (_, options) => {
   const isDev = options.mode === 'development';
   return {
     resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
       alias: {
         scss: path.resolve(__dirname, 'src/scss/'),
         fonts: path.resolve(__dirname, 'src/fonts/'),
@@ -26,7 +27,7 @@ module.exports = (env, options) => {
       ],
     },
     entry: {
-      index: './src/index.js',
+      index: './src/index.ts',
     },
     output: {
       path: path.resolve(__dirname, 'build'),
@@ -35,6 +36,11 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
+          test: /\.tsx?$/,
+          use: ['ts-loader'],
+          exclude: /node_modules/,
+        },
+        {
           test: /\.js$/,
           exclude: /node_modules/,
           use: ['eslint-loader'],
@@ -42,8 +48,9 @@ module.exports = (env, options) => {
         {
           test: /\.pug$/,
           loader: 'pug-loader',
-          query: {
+          options: {
             pretty: isDev,
+            root: path.resolve(__dirname, 'src'),
           },
         },
         {
